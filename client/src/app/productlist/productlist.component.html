@@ -1,0 +1,61 @@
+<div class="row">
+<div class="col s12 m6" >
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <button class="btn btn-danger" (click)="addproduct()">addproduct</button>
+    <div class="card-body">
+        <div class="table-responsive col m12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                           <!-- <button class="btn btn-primary"
+                                (click)='toggleImage()'>
+                                {{showImage? 'Hide' : 'Show' }}  Image  </button>-->
+                        </th>
+                        <th>image</th>
+                        <th>product name</th>
+                        <th>price</th>
+                        <th></th>
+                        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td>
+                            <!-- <img *ngIf='showImage'
+                            [src]='product.imageUrl'
+                                    [style.width.px]='imageWidth'
+                                    [style.margin.px]='imageMargin'> -->
+                        </td>
+                        <td>{{product.productname}}</td>
+                        <td>{{product.price}}</td>
+                        
+                        <td>
+                           
+                            <!-- <button class="btn btn-danger" (click)="deleteproduct(product._id)">
+                        
+                                <i class="fa fa-trash"></i></button>
+                                <button class="btn btn-primary" (click)="updateproduct(product)">
+                         
+                                    <i class="fa fa-edit"></i></button>-->
+                        </td>
+                       
+                
+                    </tr>
+                  
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+</div>
+<div class="col s12 m6">
+<router-outlet></router-outlet>
+</div>
+
