@@ -1,0 +1,10 @@
+.errorMsg{
+    color: red;
+}
+.header{
+    text-align: center;
+    text-transform: uppercase;
+}
+div .card{
+    align-self: center;
+}

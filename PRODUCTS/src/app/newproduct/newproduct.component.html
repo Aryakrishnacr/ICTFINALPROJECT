@@ -1,0 +1,83 @@
+
+    <div class="header">
+        {{title}}
+    </div>
+    <div class="col-md-4  offset-md-4">
+        <div class="card">
+        <form (ngSubmit)="addproduct()">
+    <div class="card-body">
+        <div class="table-responsive">
+         
+                <!-- <label for="name">Name</label>
+                <input formControlName="name" id="name" />
+                <div *ngIf="name.touched && name.hasError('required')">Required</div>
+              
+                <label for="email">Email</label>
+                <input formControlName="email" id="email"  />
+                <div *ngIf="email.touched && email.hasError('email')">Invalid</div>
+              
+                <label for="profile">Profile Description</label>
+                <input formControlName="email" id="profile"  />
+                <div *ngIf="profile.touched && profile.hasError('required')">Invalid</div>
+              
+                -->
+             
+              <form [formGroup]="productForm" (submit)="addproduct()">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><label>ItemtId</label></td>
+                        <td><input type="text" name="productId" formControlName="productId">
+                            <div *ngIf="productId.touched && productId.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>ItemName</label></td>
+                        <td><input type="text" name="productName" formControlName="productName"/>
+                            <div *ngIf="productName.touched && productName.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Item code</label></td>
+                        <td><input type="text" name="productCode" formControlName="productCode"/>
+                            <div *ngIf="productCode.touched && productCode.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Released Date</label></td>
+                        <td><input type="date" name="releaseDate" formControlName="releaseDate"/>
+                            <div *ngIf="releaseDate.touched && releaseDate.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Description</label></td>
+                        <td><input type="text" name="description" formControlName="description"/>
+                            <div *ngIf="description.touched && description.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Price</label></td>
+                        <td><input type="text" name="price" formControlName="price"/>
+                            <div *ngIf="price.touched && price.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>StarRating</label></td>
+                        <td><input type="text" name="starRating" formControlName="starRating"/>
+                            <div *ngIf="starRating.touched && starRating.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>ImageUrl</label></td>
+                        <td><input type="text" name="imageUrl" formControlName="imageUrl"/>
+                            <div *ngIf="imageUrl.touched && imageUrl.hasError('required')" class="errorMsg">Required</div>
+                        </td>
+                    </tr>
+                    <td></td>
+                    <td> <button type="submit" [disabled]="!productForm.valid">{{BtnText}}</button></td>
+                </tbody>
+            </table>
+        </form>
+        
+    </div>
+</div>
